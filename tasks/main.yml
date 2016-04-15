@@ -1,6 +1,6 @@
 ---
 - name: Resolve redirect early for Python < 2.7.9
-  script: files/resolve-redirect.sh {{ ansible_python_version }} {{ go_download_location }}
+  script: resolve-redirect.sh {{ ansible_python_version }} {{ go_download_location }}
   register: go_download_location_adjusted
 
 - name: Download the Go tarball
